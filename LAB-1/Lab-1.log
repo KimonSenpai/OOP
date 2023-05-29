@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.4)  26 APR 2023 21:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.4)  29 MAY 2023 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -970,6 +970,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
+Package hyperref Info: Option `colorlinks' set `true' on input line 45.
 \c@prop=\count346
 \c@theorem=\count347
 \c@lemma=\count348
@@ -1119,26 +1120,26 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 ) (Lab-1.aux)
 \openout1 = `Lab-1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 163.
-LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
 
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1161,8 +1162,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \th on input line 163.
-Package hyperref Info: Link coloring OFF on input line 163.
+LaTeX Info: Redefining \th on input line 186.
+Package hyperref Info: Link coloring ON on input line 186.
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1176,15 +1177,15 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 \c@section@level=\count365
 LaTeX Info: Redefining \Ref on input line 520.
 )
-LaTeX Info: Redefining \ref on input line 163.
-LaTeX Info: Redefining \pageref on input line 163.
-LaTeX Info: Redefining \nameref on input line 163.
+LaTeX Info: Redefining \ref on input line 186.
+LaTeX Info: Redefining \pageref on input line 186.
+LaTeX Info: Redefining \nameref on input line 186.
 
 (Lab-1.out) (Lab-1.out)
 \@outlinefile=\write4
 \openout4 = `Lab-1.out'.
 
-LaTeX Info: Redefining \Ref on input line 163.
+LaTeX Info: Redefining \Ref on input line 186.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1224,19 +1225,19 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 168
+LaTeX Font Info:    Trying to load font information for U+msa on input line 191
 .
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 168
+LaTeX Font Info:    Trying to load font information for U+msb on input line 191
 .
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 16
-8.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 19
+1.
 
 (C:\Program Files\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1269,18 +1270,27 @@ Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
 Non-PDF special ignored!
 <special> ps:0.8 setlinewidth 0 setgray
-] (Lab-1.aux)
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.4317pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.4317pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.4317pt}.
+
+[2] (Lab-1.aux)
 Package rerunfilecheck Info: File `Lab-1.out' has not changed.
-(rerunfilecheck)             Checksum: 3E59D25592039A23CB790AC664E59BCA;155.
+(rerunfilecheck)             Checksum: 89375907C0E84240194F8F56033387CB;550.
  ) 
 Here is how much of TeX's memory you used:
- 31493 strings out of 478582
- 584192 string characters out of 2854160
- 898142 words of memory out of 3000000
- 49129 multiletter control sequences out of 15000+600000
+ 31736 strings out of 478582
+ 588395 string characters out of 2854160
+ 915438 words of memory out of 3000000
+ 49359 multiletter control sequences out of 15000+600000
  482319 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,11n,117p,417b,349s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 100i,11n,117p,434b,697s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\zyong\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm12
 00.pk> <C:\Users\zyong\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\la
 bx1728.pk> <C:\Users\zyong\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
@@ -1289,9 +1299,9 @@ pi600\laxc1440.pk> <C:\Users\zyong\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t
 2a/dpi600\larm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
 /Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Lab-1.pdf (1 page, 76017 bytes).
+Output written on Lab-1.pdf (2 pages, 116911 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 283 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

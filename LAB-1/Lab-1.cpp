@@ -1,12 +1,10 @@
 #include <iostream>
 #include <vector>
-using std::cin;
-using std::cout;
 using std::vector;
 
 /// @brief Класс, хранящий матрицу и вычисляющий для каждой строки сумму и количество элементов, меньших некоторого заданного значения.
 class Matrix_t {
-  private:
+  protected:
     const int M, N; // Размеры матрицы. В процессе работы менятся не должны
     vector<vector<int>> matr;
     vector<int> sumLess, countLess;
@@ -25,7 +23,7 @@ class Matrix_t {
 
     /// @brief Поиск суммы и количества элементов, меньших q
     /// @param q число, меньше которого должны быть элементы
-    void Calculate(int q);
+    void CalculateByRows(int q);
     
     /// @brief Печатает результат в поток вывода
     /// @param out поток вывода
@@ -35,11 +33,11 @@ class Matrix_t {
 
 int main() {
   int m, n, q;
-  cin >> m >> n >> q;
+  std::cin >> m >> n >> q;
   Matrix_t A(m, n);
-  A.InputMatrix(cin);
-  A.Calculate(q);
-  A.OutputResoult(cout);
+  A.InputMatrix(std::cin);
+  A.CalculateByRows(q);
+  A.OutputResoult(std::cout);
   
 }
 
@@ -56,7 +54,7 @@ void Matrix_t::InputMatrix(std::istream& in) {
   }
 }
 
-void Matrix_t::Calculate(int q) {
+void Matrix_t::CalculateByRows(int q) {
   for (int i = 0; i < M; ++i) {
     sumLess[i] = 0;
     countLess[i] = 0;
