@@ -179,7 +179,7 @@
 
 
 
-\title{Отчёт по заданию к семинару 1\\Вариант 22}
+\title{Отчёт по заданию к семинару 2\\Вариант 22}
 \author{Ким Зыонг ИДз-22-20} 
 \date{\today}
 
@@ -192,85 +192,57 @@
 	отрицательных элементов, а для каждой строки матрицы $B (3\times 7)$ — сумму и
 	количество элементов, значения которых меньше 5.
 	
+	\section{Измененный функционал программы}
+	
+	Пользователь вводит размеры матрицы, а далее команды:
+	
+	\begin{itemize}
+		\item 0 -- закончить, идёт последней;
+		
+		\item 1 matr -- ввести матрицу, вызывается хотя бы 1 раз в самом начале;
+		
+		\item 2 q -- находит и выводит для каждой строки матрицы сумму и количество элементов, меньших q;
+		
+		\item 3 q -- находит и выводит для всей матрицы сумму и количество элементов, меньших q.
+	\end{itemize}
+	
 	\section{Материалы}
 	
-	Все материалы проекта доступны по ссылке: \url{https://github.com/KimonSenpai/OOP/tree/main/LAB-1}
+	Все материалы проекта доступны по ссылке: \url{https://github.com/KimonSenpai/OOP/tree/main/LAB-2}
 	
 	Основные файлы:
 	\begin{enumerate}
-		\item Lab-1.cpp --- файл с основной программой;
+		\item Lab-2.cpp --- файл с основной программой;
 		
-		\item Prog.exe --- скомпилированный файл Lab-1.cpp;
+		\item Prog.exe --- скомпилированный файл Lab-2.cpp;
 		
-		\item gen-test-A.py, gen-test-B.py --- программы, генерирующие тестовые матрицы A и B (по 20 штук). Они помещаются в соответствующие папки в виде 2 файлов. Файл ``<номер>'' содержит саму матрицу, а файл ``<номер>.a'' -- ожидаемый вывод программы;
+		\item gen-tests.py --- программы, генерирующие тестовые данные (по 10 штук). Они помещаются в соответствующие папки в виде 2 файлов. Файл ``<номер>'' содержит данные, а файл ``<номер>.a'' -- ожидаемый вывод программы;
 		
-		\item check-A.py, check-B.py --- проверяют правильность работы программы Prog.exe на тестовых данных соответствующего типа и записывают результат в следующие файлы;
+		\item check.py --- проверяют правильность работы программы Prog.exe на тестовых данных соответствующего типа и записывают результат в следующие файлы;
 		
-		\item ResoultA.txt, ResaultB.txt --- содержат вердикты проверки по каждому из тестов;
+		\item Resoult.txt --- содержат вердикты проверки по каждому из тестов;
 		
 		\item EXEC.cmd --- при запуске осуществляет компиляцию программы, генерацию тестов и проверку. Для работы требует наличия утилит g++ и python. Также они должны быть прописаны в переменной PATH;
 		
-		\item Lab-1.tex --- исходник данного документа.
+		\item Lab-2.tex --- исходник данного документа.
 	\end{enumerate}
-	\section{Блок-схема основного алгоритма}
+	\section{Внесенные изменения}
 	
-	В данной схеме некоторые объекты переименованы для экономии места и наглядности:
-	
+	В новом классе ``MatrixModified\_t'', который является наследником класса ``Matrix\_t'' добавляется следующее:
 	\begin{enumerate}
-		\item $matr\rightarrow m$;
+		\item В секции ``protected'' появилось перечисление ``resType'' и поле ``whatResoult'', нужное для корректного вывода результата. Также добавлены поля ``matrCountLess'', ``matrSumLess'' для нового типа результата.
 		
-		\item $sumLess\rightarrow sL$;
-		
-		\item $countLess\rightarrow cL$.
+		\item В секции ``public'' появилось:
+		\begin{itemize}
+			\item Новый конструктор --- вызывает базовы конструктор и инициализирует новые поля.
+			
+			\item CalculateByRows --- добавлено задание типа результата;
+			
+			\item CalculateInMatrix --- реализует новый функционал (команду ``3 q'');
+			
+			\item OutputResoult --- вывод теперь зависит от типа результата.
+		\end{itemize}
 	\end{enumerate}
-	
-	\begin{tikzpicture}[node distance = 1.5cm, auto]
-		\node [cloud] (start) {Начало};
-		\node [block, below of = start] (ph1) {$i = 0$};
-		\node [decision, below of = ph1] (c1) {$i < M$};
-		\node [block, below of = c1, node distance = 2.5cm] (ph2) {$sL[i] = 0$};
-		\node [block, below of = ph2] (ph3) {$cL[i] = 0$};
-		\node [block, below of = ph3] (ph4) {$j = 0$};
-		\node [decision, below of = ph4] (c2) {$j < N$};
-		\node [decision, below of = c2, node distance = 3.5cm] (c3) {$m[i][j] < q$};
-		\node [block, below of = c3, node distance = 2.5cm] (ph5) {$sL[i] += m[i][j]$};
-		\node [block, below of = ph5] (ph6) {$cL[i] += 1$};
-		\node [block, below of = ph6] (ph7) {$j += 1$};
-		\node [block, below of = ph7] (ph8) {$i += 1$};
-		\node [cloud, below of = ph8, node distance = 1.5cm] (finish) {Конец};
-		
-		\node [blanc, right of = ph5, node distance = 3cm] (b1) {};
-		\node [blanc, left of = ph5, node distance = 3cm] (b2) {};
-		\node [blanc, left of = b2, node distance = 2cm] (b3) {};
-		\node [blanc, right of = b1, node distance = 2cm] (b4) {};
-		\node [blanc, left of = b3, node distance = 2cm] (b5) {};
-		
-		\path [line] (start) -- (ph1);
-		\path [line] (ph1) -- (c1);
-		\path [line] (c1) -- node[near start]{Да} (ph2);
-		\path [line] (ph2) -- (ph3);
-		\path [line] (ph3) -- (ph4);
-		\path [line] (ph4) -- (c2);
-		\path [line] (c2) -- node[near start]{Да} (c3);
-		\path [line] (c3) -- node[near start]{Да} (ph5);
-		\path [line] (ph5) -- (ph6);
-		\path [line] (ph6) -- (ph7);
-		
-		\path [line] (ph7) -| (b1);
-		\path [line] (b1) |- (c2);
-		
-		\path [line] (c3) -| node[near start]{Нет} (b2);
-		\path [line] (b2) |- (ph7);
-		
-		\path [line] (c2) -| node[near start]{Нет} (b3);
-		\path [line] (b3) |- (ph8);
-		
-		\path [line] (ph8) -| (b4);
-		\path [line] (b4) |- (c1);
-		
-		\path [line] (c1) -| node[near start]{Нет} (b5);
-		\path [line] (b5) |- (finish);
-	\end{tikzpicture}
 	
 	
 	
