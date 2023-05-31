@@ -325,6 +325,7 @@ namespace CppCLRWinFormsProject {
 	
 
 	private: System::Void SetSize_Click(System::Object^ sender, System::EventArgs^ e) {
+		// Проверка правильности ввода данных
 		try {
 			m = Convert::ToInt32(SizeM->Text);
 			n = Convert::ToInt32(SizeN->Text);
@@ -339,7 +340,8 @@ namespace CppCLRWinFormsProject {
 			MessageBox::Show(L"Неправильные размеры!", L"Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			return;
 		}
-		initMatrix = true;
+
+		initMatrix = true;// Отключение события ValueChange у матрицы.
 		Matrix->Rows->Clear();
 		Matrix->Columns->Clear();
 
@@ -376,7 +378,7 @@ namespace CppCLRWinFormsProject {
 
 		ByRow->Enabled = true;
 		InMatrix->Enabled = true;
-		initMatrix = false;
+		initMatrix = false;// Включение события ValueChange у матрицы.
 	}
 	private: System::Void Matrix_CellValueChanged(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 		if (initMatrix) return;
@@ -384,18 +386,20 @@ namespace CppCLRWinFormsProject {
 		int i = e->RowIndex,
 			j = e->ColumnIndex;
 
+		// Проверка правильности ввода данных
 		try {
 			matrix->SetVal(i, j, Convert::ToInt32(Matrix->Rows[i]->Cells[j]->Value));
 		}
 		catch (...) {
 			MessageBox::Show(L"Неправильное значение элемента матрицы!", L"Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
-			matrix->SetVal(i, j, 0);
-			Matrix->Rows[i]->Cells[j]->Value = int(0).ToString();
+			Matrix->Rows[i]->Cells[j]->Value = matrix->GetVal(i, j).ToString();
 		}
 	}
 	private: System::Void ByRowReq_Click(System::Object^ sender, System::EventArgs^ e) {
 		int q;
 		Resoult->Rows->Clear();
+
+		// Проверка правильности ввода данных
 		try {
 			q = Convert::ToInt32(ByRowQ->Text);
 		}
@@ -416,6 +420,8 @@ namespace CppCLRWinFormsProject {
 	private: System::Void InMatrixReq_Click(System::Object^ sender, System::EventArgs^ e) {
 		int q;
 		Resoult->Rows->Clear();
+
+		// Проверка правильности ввода данных
 		try {
 			q = Convert::ToInt32(InMatrixQ->Text);
 		}
