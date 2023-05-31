@@ -1,0 +1,5 @@
+D:\MEI\VI term\tmp\Lab-3\x64\Debug\Lab-3.vcxproj.AssemblyReference.cache
+D:\MEI\VI term\tmp\Lab-3\x64\Debug\Lab-3.vcxproj.SuggestedBindingRedirects.cache
+D:\MEI\VI term\tmp\Lab-3\x64\Debug\Lab_3.Form1.resources
+D:\MEI\VI term\tmp\Lab-3\x64\Debug\Lab-3.vcxproj.GenerateResource.cache
+D:\MEI\VI term\tmp\Lab-3\x64\Debug\Lab-3.exe

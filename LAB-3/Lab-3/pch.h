@@ -7,7 +7,10 @@
 #ifndef PCH_H
 #define PCH_H
 
-// add headers that you want to pre-compile here
+using namespace System;
+using namespace System::Collections::Generic;
+
+#include "Matrix.h"
+#include "ModifiedMatrix.h"
 
 #endif //PCH_H
-
